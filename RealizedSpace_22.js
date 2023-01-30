@@ -60,7 +60,8 @@
  правильних відповідей з усіх
 
  */
-document.querySelector(".check").onclick = function () {
+//document.querySelector(".check").onclick = function () {
+document.querySelector(".check").addEventListener('click',function (){
     let result = 0
     for (let i = 0 ; i < questions.length ; i++) {
         const answer =[]
@@ -70,4 +71,4 @@ document.querySelector(".check").onclick = function () {
         }
     }
     return alert(`Your result is : ${result} / ${questions.length}`)
-}
+} )
