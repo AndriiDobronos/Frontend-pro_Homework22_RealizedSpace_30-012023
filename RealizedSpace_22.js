@@ -60,7 +60,15 @@
  правильних відповідей з усіх
 
  */
-//document.querySelector(".check").onclick = function () {
+
+let AllLi = ``
+const ul = document.querySelector('.questions')
+for (let j = 0 ; j < questions.length ; j++) {
+    const li = []
+    li[j] = `<li>${questions[j].caption}<br><input type="checkbox"/></li>`
+    AllLi = AllLi + `${li[j]}`
+}
+ul.innerHTML =  AllLi
 document.querySelector(".check").addEventListener('click',function (){
     let result = 0
     for (let i = 0 ; i < questions.length ; i++) {
